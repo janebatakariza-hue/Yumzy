@@ -12,13 +12,16 @@
   padding: 0 48px;
   overflow: hidden;
 
-  /* Dark green atmospheric background */
-  background: radial-gradient(
-    ellipse at 60% 40%,
-    #1a3d1a 0%,
-    #0a1a0a 50%,
-    #050f05 100%
-  );
+  background-image:
+    radial-gradient(
+      ellipse at 60% 40%,
+      rgba(26, 61, 26, 0.4) 0%,
+      rgba(10, 26, 10, 0.5) 50%,
+      rgba(5, 15, 5, 0.6) 100%
+    ),
+    url("/bg.png");
+  background-size: cover;
+  background-position: center;
 }
 
 /* Subtle texture overlay */
@@ -26,7 +29,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: url("/hero-bg.jpg") center/cover no-repeat;
+  /* background: url("/hero-bg.jpg") center/cover no-repeat; */
   opacity: 0.55;
   z-index: 0;
 }
@@ -44,15 +47,15 @@
 .hero-title-white {
   font-family: "Playfair Display", serif;
   font-size: 58px;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--white);
-  line-height: 1.1;
+  line-height: 0.5;
 }
 
 .hero-title-gold {
   font-family: "Playfair Display", serif;
   font-size: 58px;
-  font-weight: 700;
+  font-weight: 400;
   color: var(--gold);
   line-height: 1.1;
 }
@@ -78,7 +81,7 @@
   padding: 14px 28px;
   border-radius: 8px;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 300;
   cursor: pointer;
   font-family: "DM Sans", sans-serif;
   transition:
@@ -92,7 +95,7 @@
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.08);
+  background: #112e22;
   color: var(--white);
   border: 1px solid rgba(255, 255, 255, 0.25);
   padding: 14px 28px;
@@ -108,7 +111,7 @@
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: #124b33;
   transform: translateY(-1px);
 }
 
@@ -121,7 +124,7 @@
 
 .hero-image img {
   width: 480px;
-  height: 420px;
+  height: 400px;
   object-fit: cover;
   border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
   filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.6));
