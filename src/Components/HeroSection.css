@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  overflow: hidden;
+
+  /* Dark green atmospheric background */
+  background: radial-gradient(
+    ellipse at 60% 40%,
+    #1a3d1a 0%,
+    #0a1a0a 50%,
+    #050f05 100%
+  );
+}
+
+/* Subtle texture overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/hero-bg.jpg") center/cover no-repeat;
+  opacity: 0.55;
+  z-index: 0;
+}
+
+/* Left content sits above overlay */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero-title-white {
+  font-family: "Playfair Display", serif;
+  font-size: 58px;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.1;
+}
+
+.hero-title-gold {
+  font-family: "Playfair Display", serif;
+  font-size: 58px;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: #1a0f00;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
+.btn-primary:hover {
+  background: var(--gold-light);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+  backdrop-filter: blur(6px);
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Right food image */
+.hero-image {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.hero-image img {
+  width: 480px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+  filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.6));
+}

@@ -1,3 +1,5 @@
+import React from "react";
+import "./HeroSection.css";
 function HeroSection() {
   return (
     <section className="hero">
@@ -13,7 +15,7 @@ function HeroSection() {
         </div>
       </div>
       <div className="hero-image">
-        <img src="/food-bowl.png" alt="Featured Dish" />
+        <img src="/dish.png" alt="Featured Dish" />
       </div>
     </section>
   );

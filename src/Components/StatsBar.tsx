@@ -1,3 +1,6 @@
+import './StatsBar.css';
+import React from 'react';
+
 function StatsBar() {
   const stats = [
     { value: "50+", label: "Restaurants", gold: false },
@@ -18,3 +21,4 @@ function StatsBar() {
     </div>
   );
 }
+export default StatsBar;
