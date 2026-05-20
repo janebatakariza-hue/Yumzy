@@ -1,4 +1,5 @@
 import "./RestaurantCard.css";
+import restaurantImg from "./restaurant.jpg";
 
 type Restaurant = {
   id: number;
@@ -32,7 +33,7 @@ function RestaurantCard({ restaurant }: { restaurant: Restaurant }) {
     <div className="restaurant-card">
       {/* Image */}
       <div className="card-image-wrapper">
-        <img src={restaurant.image} alt={restaurant.name} />
+        <img src={restaurantImg} alt={restaurant.name} />
         <span className={`card-badge ${badgeClass[restaurant.type]}`}>
           {restaurant.type}
         </span>
@@ -41,7 +42,7 @@ function RestaurantCard({ restaurant }: { restaurant: Restaurant }) {
       {/* Body */}
       <div className="card-body">
         <h3 className="card-name">{restaurant.name}</h3>
-        <p className="card-location">📍 {restaurant.location}</p>
+        <p className="card-location"> {restaurant.location}</p>
         <p className="card-cuisine">{restaurant.cuisine}</p>
 
         <div className="card-meta">

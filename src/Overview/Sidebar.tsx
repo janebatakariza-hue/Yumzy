@@ -66,14 +66,4 @@ function Sidebar() {
 }
 
 export default Sidebar;
-// export type Restaurant = {
-//   id: number;
-//   name: string;
-//   location: string;
-//   cuisine: string;
-// };
-// rating: number;
-// reviews: number;
-// status: string;
-// type: string;
-// image: string;
+

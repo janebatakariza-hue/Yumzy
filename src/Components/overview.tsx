@@ -9,7 +9,7 @@ import "./overview.css";
 function Overview() {
   return (
     <div className="overview-page">
-      {/* <Sidebar /> */}
+      <Sidebar />
       <div className="main-content">
         <TopBar />
         <FilterBar />
