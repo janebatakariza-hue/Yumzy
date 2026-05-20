@@ -1,4 +1,4 @@
-// import Sidebar from "../Overview/Sidebar";
+import Sidebar from "../Overview/Sidebar";
 import TopBar from "../Overview/TopBar";
 import FilterBar from "../Overview/FilterBar";
 import RestaurantCard from "../Overview/RestaurantCard";
