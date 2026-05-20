@@ -1,15 +1,15 @@
-import Sidebar from "./Overview/Sidebar";
-import TopBar from "./Overview/TopBar";
-import FilterBar from "./Overview/FilterBar";
-import RestaurantCard from "./Overview/RestaurantCard";
-import Pagination from "./Overview/Pagination";
-import { restaurants } from "./Overview/restaurants.data";
+// import Sidebar from "../Overview/Sidebar";
+import TopBar from "../Overview/TopBar";
+import FilterBar from "../Overview/FilterBar";
+import RestaurantCard from "../Overview/RestaurantCard";
+import Pagination from "../Overview/Pagination";
+import { restaurants } from "../Overview/restaurants.data";
 import "./overview.css";
 
 function Overview() {
   return (
     <div className="overview-page">
-      <Sidebar />
+      {/* <Sidebar /> */}
       <div className="main-content">
         <TopBar />
         <FilterBar />
