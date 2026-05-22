@@ -1,3 +1,7 @@
+
+body {
+  font-family: "Jost", sans-serif;
+}
 .topbar {
   display: flex;
   align-items: center;
@@ -11,12 +15,14 @@
   font-size: 20px;
   font-weight: 700;
   color: #1a1a1a;
+  font-family: "jost", sans-serif;
 }
 
 .topbar-left p {
   font-size: 13px;
   color: #888;
   margin-top: 2px;
+  font-family: "jost", sans-serif;
 }
 
 .topbar-right {
@@ -52,7 +58,7 @@
   font-size: 14px;
   color: #1a1a1a;
   width: 100%;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Jost", sans-serif;
 }
 
 .search-bar input::placeholder {
@@ -99,3 +105,4 @@
 .icon-btn:hover svg {
   stroke: #d4920a;
 }
+
