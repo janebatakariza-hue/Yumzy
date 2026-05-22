@@ -1,7 +1,7 @@
 import Sidebar from "../Overview/Sidebar";
-import TopBar from "../Overview/TopBar";
-import FilterBar from "../Overview/FilterBar";
-import RestaurantCard from "../Overview/RestaurantCard";
+import TopBar from "../Overview/Topbar";
+import FilterBar from "../Overview/Filterbar";
+import RestaurantCard from "../Overview/Restaurantcard";
 import Pagination from "../Overview/Pagination";
 import { restaurants } from "../Overview/restaurants.data";
 import "./overview.css";

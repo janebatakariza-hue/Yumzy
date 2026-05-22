@@ -1,5 +1,4 @@
-import "./RestaurantCard.css";
-import restaurantImg from "./restaurant.jpg";
+import "./Restaurantcard.css";
 
 type Restaurant = {
   id: number;
@@ -31,9 +30,8 @@ function RestaurantCard({ restaurant }: { restaurant: Restaurant }) {
 
   return (
     <div className="restaurant-card">
-      {/* Image */}
       <div className="card-image-wrapper">
-        <img src={restaurantImg} alt={restaurant.name} />
+        {<img src={restaurant.image} alt={restaurant.name} />}
         <span className={`card-badge ${badgeClass[restaurant.type]}`}>
           {restaurant.type}
         </span>

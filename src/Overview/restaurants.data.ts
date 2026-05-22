@@ -8,7 +8,7 @@ export const restaurants = [
     reviews: 124,
     status: "OPEN",
     type: "RESTAURANT",
-    image: "/soy.jpg",
+    image: "/soy.png",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ export const restaurants = [
     reviews: 302,
     status: "OPEN",
     type: "HOTEL",
-    image: "/hotel.jpg",
+    image: "/hotel.png",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ export const restaurants = [
     reviews: 88,
     status: "CLOSES 02:00",
     type: "PUB",
-    image: "/sundowner.jpg",
+    image: "/sundowner.png",
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ export const restaurants = [
     reviews: 210,
     status: "OPEN",
     type: "CAFE",
-    image: "/aroma.jpg",
+    image: "/aroma.png",
   },
   {
     id: 5,
@@ -52,7 +52,7 @@ export const restaurants = [
     reviews: 56,
     status: "CLOSED",
     type: "RESTAURANT",
-    image: "/planet.jpg",
+    image: "/planet.png",
   },
   {
     id: 6,
@@ -63,6 +63,6 @@ export const restaurants = [
     reviews: 178,
     status: "OPEN",
     type: "RESTAURANT",
-    image: "/choose.jpg",
+    image: "/kigali.png",
   },
 ];
