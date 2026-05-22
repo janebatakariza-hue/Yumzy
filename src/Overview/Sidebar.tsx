@@ -2,9 +2,9 @@ import "./Sidebar.css";
 
 const navItems = [
   { label: "Dashboard", icon: "▦", active: true },
-  { label: "Restaurants", icon: "🍽", active: false },
-  { label: "My Orders", icon: "📋", active: false },
-  { label: "Tables", icon: "🪑", active: false },
+  { label: "Restaurants", icon: "⊞", active: false },
+  { label: "My Orders", icon: "≡", active: false },
+  { label: "Tables", icon: "⬜", active: false },
   { label: "Favorites", icon: "♥", active: false },
 ];
 
@@ -43,7 +43,7 @@ function Sidebar() {
           </a>
         ))}
       </nav>
-
+      <div className="sidebar-divider"></div>
       <div className="sidebar-bottom-nav">
         {bottomItems.map((item) => (
           <a key={item.label} className="nav-item">
@@ -66,4 +66,3 @@ function Sidebar() {
 }
 
 export default Sidebar;
-
