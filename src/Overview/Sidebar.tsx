@@ -22,6 +22,7 @@ function Sidebar() {
           <span className="logo-name">Yumzy</span>
           <span className="logo-sub">CUSTOMER PORTAL</span>
         </div>
+        
       </div>
 
       <div className="sidebar-user">

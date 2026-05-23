@@ -9,7 +9,6 @@
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  /* margin-left: 240px; */
 }
 .overview-header {
   padding: 20px;
