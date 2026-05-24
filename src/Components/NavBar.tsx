@@ -1,5 +1,5 @@
-import React from "react";
 import "./NavBar.css";
+import {Link} from 'react-router-dom';
 export default function NavBar() {
   return (
     <>
@@ -13,7 +13,7 @@ export default function NavBar() {
         {/* Nav Links */}
         <ul>
           <li>
-            <a href="#overview">Overview</a>
+           <Link to="/overview">Overview</Link>
           </li>
           <li>
             <a href="#menu">Menu</a>

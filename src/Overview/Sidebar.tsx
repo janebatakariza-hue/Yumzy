@@ -1,4 +1,5 @@
 import "./Sidebar.css";
+import { useNavigate } from "react-router-dom";
 
 const navItems = [
   { label: "Dashboard", icon: "▦", active: true },
@@ -14,15 +15,16 @@ const bottomItems = [
 ];
 
 function Sidebar() {
+  const navigate = useNavigate();
   return (
     <aside className="sidebar">
       <div className="sidebar-logo">
         <img src="/logo.png" alt="Yumzy" />
+
         <div>
           <span className="logo-name">Yumzy</span>
           <span className="logo-sub">CUSTOMER PORTAL</span>
         </div>
-        
       </div>
 
       <div className="sidebar-user">
@@ -60,7 +62,7 @@ function Sidebar() {
         <p className="promo-sub">Get 10% off your first order.</p>
         <button className="promo-btn">Claim Offer →</button>
       </div>
-
+      <button onClick={() => navigate("/")}>⬅️ Back to home</button>
       <button className="logout-btn">↩ Log Out</button>
     </aside>
   );
