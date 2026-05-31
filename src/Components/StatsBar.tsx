@@ -1,5 +1,4 @@
 import "./StatsBar.css";
-import React from "react";
 
 function StatsBar() {
   const stats = [
@@ -12,10 +11,10 @@ function StatsBar() {
     <div className="stats-bar">
       {stats.map((stat, index) => (
         <div className="stat-item" key={index}>
-          <span className={stat.gold ? "Stat-value-gold" : "Stat-value"}>
+          <span className={stat.gold ? "stat-value-gold" : "stat-value"}>
             {stat.value}
           </span>
-          <span className="Stat-label">{stat.label}</span>
+          <span className="stat-label">{stat.label}</span>
         </div>
       ))}
     </div>

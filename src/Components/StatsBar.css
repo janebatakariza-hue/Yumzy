@@ -1,14 +1,14 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .stats-bar {
   background: var(--stat-bg);
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 24px 48px;
+  padding: 24px 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 

@@ -1,4 +1,6 @@
 import "./Sidebar.css";
+import { useState } from "react";
+
 import { useNavigate } from "react-router-dom";
 
 const navItems = [
@@ -20,7 +22,6 @@ function Sidebar() {
     <aside className="sidebar">
       <div className="sidebar-logo">
         <img src="/logo.png" alt="Yumzy" />
-
         <div>
           <span className="logo-name">Yumzy</span>
           <span className="logo-sub">CUSTOMER PORTAL</span>
@@ -35,7 +36,7 @@ function Sidebar() {
         </div>
       </div>
 
-      <nav className="sidebar-nav">
+      <div>
         {navItems.map((item) => (
           <a
             key={item.label}
@@ -45,8 +46,9 @@ function Sidebar() {
             {item.label}
           </a>
         ))}
-      </nav>
-      <div className="sidebar-divider"></div>
+      </div>
+     
+
       <div className="sidebar-bottom-nav">
         {bottomItems.map((item) => (
           <a key={item.label} className="nav-item">
@@ -62,7 +64,11 @@ function Sidebar() {
         <p className="promo-sub">Get 10% off your first order.</p>
         <button className="promo-btn">Claim Offer →</button>
       </div>
-      <button onClick={() => navigate("/")}>⬅️ Back to home</button>
+
+      <div className="back">
+        <button onClick={() => navigate("/")}>⬅️ Back to home</button>
+      </div>
+
       <button className="logout-btn">↩ Log Out</button>
     </aside>
   );

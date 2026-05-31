@@ -7,6 +7,7 @@ body {
   justify-content: space-between;
   padding: 20px 32px;
   background: white;
+  width: 100%;
   border-bottom: 1px solid #ece8e0;
 }
 
