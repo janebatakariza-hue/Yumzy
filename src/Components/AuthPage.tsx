@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AuthPage.css";
-import { Eye, EyeOff, Chrome, Facebook } from "lucide-react";
+import { Eye, EyeOff} from "lucide-react";
+import { FcGoogle} from "react-icons/fc";
+import {FaFacebook} from "react-icons/fa";
+
 
 export default function AuthPage() {
   const navigate = useNavigate();
@@ -63,8 +66,8 @@ export default function AuthPage() {
             </div>
 
             <div className="auth-socials">
-              <button className="auth-social-btn"><Chrome size={15}/> Google </button>
-              <button className="auth-social-btn"><Facebook size={15} /> Facebook</button>
+              <button className="auth-social-btn"><FcGoogle size={16}/> Google </button>
+              <button className="auth-social-btn"><FaFacebook size={16} /> Facebook</button>
             </div>
 
             <p className="auth-switch">
@@ -172,10 +175,10 @@ export default function AuthPage() {
 
             <div className="auth-socials">
               <button className="auth-social-btn">
-                <Chrome size={15} /> Google
+                <FcGoogle size={15} /> Google
               </button>
               <button className="auth-social-btn">
-                <Facebook size={15} /> Facebook
+                <FaFacebook size={15} /> Facebook
               </button>
             </div>
 

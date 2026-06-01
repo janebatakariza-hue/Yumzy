@@ -1,5 +1,5 @@
 import "./NavBar.css";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 export default function NavBar() {
   return (
     <>
@@ -13,19 +13,22 @@ export default function NavBar() {
         {/* Nav Links */}
         <ul>
           <li>
-           <Link to="/overview">Overview</Link>
+            <Link to="/overview">Overview</Link>
           </li>
           <li>
-            <a href="#menu">Menu</a>
+            <Link to="/menu">Menu</Link>
           </li>
           <li>
-            <a href="#tables">Tables</a>
+            <Link to="/orders">Orders</Link>
           </li>
           <li>
-            <a href="#orders">Orders</a>
+            <Link to="/tables">Tables</Link>
           </li>
           <li>
-            <a href="#clients">Clients</a>
+            <Link to="/clients">Clients</Link>
+          </li>
+          <li>
+            <Link to="/login">Login</Link>
           </li>
         </ul>
       </nav>

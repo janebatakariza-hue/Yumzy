@@ -3,6 +3,7 @@ import { restaurants } from "../Overview/restaurants.data";
 import Sidebar from "../Overview/Sidebar";
 import TopBar from "../Overview/Topbar";
 import FilterBar from "../Overview/Filterbar";
+import { useNavigate } from "react-router-dom";
 
 const badgeColors: Record<string, string> = {
   RESTAURANT: "#2d5a1b",
@@ -13,7 +14,7 @@ const badgeColors: Record<string, string> = {
 
 function Overview() {
   const [currentPage, setCurrentPage] = useState(1);
-
+  const navigate = useNavigate();
   return (
     <div
       style={{
@@ -175,6 +176,7 @@ function Overview() {
                       fontSize: "14px",
                       cursor: isOpen ? "pointer" : "not-allowed",
                     }}
+                    onClick={() => isOpen && navigate("/menu")}
                   >
                     {isOpen ? "View Menu →" : "Currently Closed"}
                   </button>

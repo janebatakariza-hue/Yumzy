@@ -1,19 +1,17 @@
 import "./Sidebar.css";
-import { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 
-import { useNavigate } from "react-router-dom";
-
-const navItems = [
-  { label: "Dashboard", icon: "▦", active: true },
-  { label: "Restaurants", icon: "⊞", active: false },
-  { label: "My Orders", icon: "≡", active: false },
-  { label: "Tables", icon: "⬜", active: false },
-  { label: "Favorites", icon: "♥", active: false },
+const navItems: { label: string; icon: string; path: string }[] = [
+  { label: "Dashboard", icon: "▦", path: "/overview" },
+  { label: "Restaurants", icon: "⊞", path: "/overview" },
+  { label: "My Orders", icon: "≡", path: "/orders" },
+  { label: "Tables", icon: "⬜", path: "/tables" },
+  { label: "Favorites", icon: "♥", path: "/favorites" },
 ];
 
-const bottomItems = [
-  { label: "Settings", icon: "⚙" },
-  { label: "My Profile", icon: "👤" },
+const bottomItems: { label: string; icon: string; path: string }[] = [
+  { label: "Settings", icon: "⚙", path: "/settings" },
+  { label: "My Profile", icon: "👤", path: "/profile" },
 ];
 
 function Sidebar() {
@@ -36,30 +34,36 @@ function Sidebar() {
         </div>
       </div>
 
-      <div>
+      <nav className="sidebar-nav">
         {navItems.map((item) => (
-          <a
+          <NavLink
             key={item.label}
-            className={`nav-item ${item.active ? "active" : ""}`}
+            to={item.path}
+            className={({ isActive }) => `nav-item ${isActive ? "active" : ""}`}
           >
             <span>{item.icon}</span>
             {item.label}
-          </a>
+          </NavLink>
         ))}
-      </div>
-     
+      </nav>
+
+      <div className="sidebar-divider"></div>
 
       <div className="sidebar-bottom-nav">
         {bottomItems.map((item) => (
-          <a key={item.label} className="nav-item">
+          <NavLink
+            key={item.label}
+            to={item.path}
+            className={({ isActive }) => `nav-item ${isActive ? "active" : ""}`}
+          >
             <span>{item.icon}</span>
             {item.label}
-          </a>
+          </NavLink>
         ))}
       </div>
 
       <div className="promo-card">
-        <img src="/food-promo.png" alt="Promo" />
+        <img src="/foodpromo.png" alt="Promo" />
         <p className="promo-title">Order today!</p>
         <p className="promo-sub">Get 10% off your first order.</p>
         <button className="promo-btn">Claim Offer →</button>

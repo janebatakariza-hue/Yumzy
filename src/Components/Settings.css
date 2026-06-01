@@ -1,0 +1,349 @@
+.settings-page {
+  display: flex;
+  min-height: 100vh;
+  font-family: "DM Sans", sans-serif;
+  background: #f5f0e8;
+}
+.settings-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 32px;
+  gap: 20px;
+  min-width: 0;
+}
+
+/* TOPBAR */
+.settings-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.settings-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+.settings-subtitle {
+  font-size: 13px;
+  color: #888;
+  margin: 2px 0 0;
+}
+.settings-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.settings-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  border: 1.5px solid #e8e8e8;
+  border-radius: 10px;
+  padding: 9px 16px;
+  width: 200px;
+}
+.settings-search input {
+  border: none;
+  outline: none;
+  font-size: 13px;
+  width: 100%;
+  font-family: "DM Sans", sans-serif;
+  background: transparent;
+}
+.settings-icon-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: white;
+  border: 1.5px solid #e8e8e8;
+  cursor: pointer;
+  font-size: 16px;
+}
+.settings-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #d4920a;
+  color: #1a0f00;
+  font-weight: 700;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* BODY */
+.settings-body {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+  align-items: flex-start;
+}
+
+/* LEFT NAV */
+.settings-nav {
+  width: 200px;
+  min-width: 200px;
+  background: white;
+  border-radius: 14px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.settings-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: background 0.15s;
+  font-family: "DM Sans", sans-serif;
+}
+.settings-nav-item.active {
+  background: #1a3d1a;
+}
+.settings-nav-item.active .settings-nav-label {
+  color: white;
+}
+.settings-nav-item.active .settings-nav-sub {
+  color: rgba(255, 255, 255, 0.6);
+}
+.settings-nav-item:hover:not(.active) {
+  background: #f5f0e8;
+}
+.settings-nav-icon {
+  font-size: 16px;
+  flex-shrink: 0;
+}
+.settings-nav-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+.settings-nav-sub {
+  font-size: 10px;
+  color: #aaa;
+  margin: 0;
+}
+
+/* CONTENT */
+.settings-content {
+  flex: 1;
+  background: white;
+  border-radius: 14px;
+  padding: 24px 28px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.settings-section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 20px;
+}
+
+/* AVATAR ROW */
+.settings-avatar-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.settings-user-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #e8e8e8;
+}
+.settings-avatar-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.settings-change-photo-btn {
+  background: #1a1a1a;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+}
+.settings-remove-btn {
+  background: transparent;
+  border: 1.5px solid #e8e8e8;
+  color: #888;
+  padding: 7px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+}
+.settings-avatar-hint {
+  font-size: 11px;
+  color: #aaa;
+  margin: 0;
+}
+
+/* FORM GRID */
+.settings-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 32px;
+}
+.settings-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.settings-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.settings-field label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #888;
+}
+.settings-field input {
+  border: 1.5px solid #e8e8e8;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  outline: none;
+  font-family: "DM Sans", sans-serif;
+  color: #1a1a1a;
+  transition: border-color 0.2s;
+}
+.settings-field input:focus {
+  border-color: #d4920a;
+}
+
+/* PASSWORD */
+.settings-password-section {
+  padding-top: 8px;
+  border-top: 1px solid #f0ece4;
+}
+.settings-password-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 2px;
+}
+.settings-password-hint {
+  font-size: 12px;
+  color: #aaa;
+  margin: 0 0 10px;
+}
+.settings-change-pass-btn {
+  background: #f0ece4;
+  color: #1a1a1a;
+  border: none;
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+}
+
+/* ACTIONS */
+.settings-actions {
+  display: flex;
+  gap: 12px;
+  padding-top: 8px;
+}
+.settings-save-btn {
+  background: #2d7a2d;
+  color: white;
+  border: none;
+  padding: 11px 28px;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+  transition: background 0.2s;
+}
+.settings-save-btn:hover {
+  background: #1a3d1a;
+}
+.settings-cancel-btn {
+  background: transparent;
+  border: 1.5px solid #e8e8e8;
+  color: #888;
+  padding: 11px 24px;
+  border-radius: 9px;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+}
+
+/* PREFERENCES */
+.settings-prefs {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.settings-prefs-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 4px;
+}
+.settings-pref-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.settings-pref-label {
+  font-size: 13px;
+  color: #444;
+}
+
+/* TOGGLE */
+.settings-toggle {
+  width: 40px;
+  height: 22px;
+  border-radius: 20px;
+  background: #e0ddd8;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.2s;
+  flex-shrink: 0;
+  padding: 0;
+}
+.settings-toggle.on {
+  background: #2d7a2d;
+}
+.settings-toggle-knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  transition: left 0.2s;
+  display: block;
+}
+.settings-toggle.on .settings-toggle-knob {
+  left: 21px;
+}
