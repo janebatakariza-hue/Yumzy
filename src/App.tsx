@@ -9,6 +9,8 @@ import MyOrders from "./Components/MyOrders";
 import AuthPage from "./Components/AuthPage";
 import Favorites from "./Components/Favourite";
 import Settings from "./Components/Settings";
+import MyProfile from "./Components/MyProfile";
+import Restaurants from "./Components/RestaurantPage";
 export default function App() {
   return (
     <Routes>
@@ -28,8 +30,9 @@ export default function App() {
       <Route path="/menu" element={<MenuPage />} />
       <Route path="/orders" element={<MyOrders />} />
       <Route path="/favorites" element={<Favorites />} />
-
+      <Route path="/profile" element={<MyProfile />} />
       <Route path="/settings" element={<Settings />} />
+      <Route path="/restaurants" element={<Restaurants />} />
     </Routes>
   );
 }

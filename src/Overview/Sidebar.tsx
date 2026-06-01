@@ -1,9 +1,10 @@
 import "./Sidebar.css";
 import { NavLink, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const navItems: { label: string; icon: string; path: string }[] = [
   { label: "Dashboard", icon: "▦", path: "/overview" },
-  { label: "Restaurants", icon: "⊞", path: "/overview" },
+  { label: "Restaurants", icon: "⊞", path: "/restaurants" },
   { label: "My Orders", icon: "≡", path: "/orders" },
   { label: "Tables", icon: "⬜", path: "/tables" },
   { label: "Favorites", icon: "♥", path: "/favorites" },
@@ -15,6 +16,7 @@ const bottomItems: { label: string; icon: string; path: string }[] = [
 ];
 
 function Sidebar() {
+  const location = useLocation();
   const navigate = useNavigate();
   return (
     <aside className="sidebar">
@@ -34,31 +36,31 @@ function Sidebar() {
         </div>
       </div>
 
-      <nav className="sidebar-nav">
+      <div className="sidebar-nav">
         {navItems.map((item) => (
-          <NavLink
+          <div
             key={item.label}
-            to={item.path}
-            className={({ isActive }) => `nav-item ${isActive ? "active" : ""}`}
+            className={`nav-item ${location.pathname === item.path ? "active" : ""}`}
+            onClick={() => navigate(item.path)}
           >
             <span>{item.icon}</span>
             {item.label}
-          </NavLink>
+          </div>
         ))}
-      </nav>
+      </div>
 
       <div className="sidebar-divider"></div>
 
       <div className="sidebar-bottom-nav">
         {bottomItems.map((item) => (
-          <NavLink
+          <div
             key={item.label}
-            to={item.path}
-            className={({ isActive }) => `nav-item ${isActive ? "active" : ""}`}
+            className={`nav-item ${location.pathname === item.path ? "active" : ""}`}
+            onClick={() => navigate(item.path)}
           >
             <span>{item.icon}</span>
             {item.label}
-          </NavLink>
+          </div>
         ))}
       </div>
 

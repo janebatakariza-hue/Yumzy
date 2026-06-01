@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { restaurants } from "../Overview/restaurants.data";
+import { restaurants } from "../Overview/Restaurants.data";
 import Sidebar from "../Overview/Sidebar";
 import TopBar from "../Overview/Topbar";
 import FilterBar from "../Overview/Filterbar";
