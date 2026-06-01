@@ -75,7 +75,9 @@ function Sidebar() {
         <button onClick={() => navigate("/")}>⬅️ Back to home</button>
       </div>
 
-      <button className="logout-btn">↩ Log Out</button>
+      <button className="logout-btn" onClick={() => navigate("/login")}>
+        ↩ Log Out
+      </button>
     </aside>
   );
 }
