@@ -1,0 +1,118 @@
+.admin-sidebar {
+  width: 200px;
+  min-width: 200px;
+  min-height: 100vh;
+  background: #0f2010;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  gap: 4px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* LOGO */
+.admin-sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+  padding: 0 4px;
+}
+.admin-sidebar-logo img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.admin-logo-name {
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+/* NAV */
+.admin-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.admin-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 14px;
+  border-radius: 10px;
+  color: rgba(255,255,255,0.55);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: "DM Sans", sans-serif;
+  border-left: 3px solid transparent;
+}
+.admin-nav-item:hover {
+  background: rgba(255,255,255,0.07);
+  color: white;
+}
+.admin-nav-item.active {
+  color: white;
+  font-weight: 700;
+  border-left: 3px solid #d4920a;
+  background: rgba(255,255,255,0.07);
+}
+
+/* DIVIDER */
+.admin-sidebar-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+  margin: 12px 0;
+}
+
+/* PROFILE */
+.admin-sidebar-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding: 14px 10px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.06);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.admin-sidebar-profile:hover {
+  background: rgba(255,255,255,0.1);
+}
+.admin-profile-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #1a3d1a;
+  border: 2px solid #d4920a;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: "DM Sans", sans-serif;
+}
+.admin-profile-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+}
+.admin-profile-role {
+  font-size: 10px;
+  color: rgba(255,255,255,0.5);
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+}

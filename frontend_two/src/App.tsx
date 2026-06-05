@@ -11,6 +11,8 @@ import Favorites from "./Components/Favourite";
 import Settings from "./Components/Settings";
 import MyProfile from "./Components/MyProfile";
 import Restaurants from "./Components/RestaurantPage";
+import MyTables from "./Components/MyTables";
+import Clients from "./Components/Clients";
 export default function App() {
   return (
     <Routes>
@@ -33,6 +35,8 @@ export default function App() {
       <Route path="/profile" element={<MyProfile />} />
       <Route path="/settings" element={<Settings />} />
       <Route path="/restaurants" element={<Restaurants />} />
+      <Route path="/tables" element={<MyTables />} />
+          <Route path="/clients" element={<Clients />} />
     </Routes>
   );
 }
