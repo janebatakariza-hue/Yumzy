@@ -3,6 +3,8 @@
   min-height: 100vh;
   font-family: "DM Sans", sans-serif;
   background: #f5f0e8;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .admin-layout-main {
@@ -11,6 +13,7 @@
   flex-direction: column;
   min-width: 0;
   overflow-y: auto;
+  width: 100%;
 }
 
 /* HEADER */
@@ -18,7 +21,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px 28px 0;
+  padding: 20px 24px 0;
+  background: #f5f0e8;
   gap: 16px;
 }
 
@@ -42,11 +46,12 @@
   flex-shrink: 0;
 }
 
-/* CONTENT */
 .admin-layout-content {
   flex: 1;
-  padding: 20px 28px 32px;
+  padding: 20px 24px 32px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  background: #f5f0e8;
+  min-height: 100vh;
 }

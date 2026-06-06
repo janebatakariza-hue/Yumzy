@@ -1,0 +1,251 @@
+/* MINI STATS */
+.rest-mini-stats {
+  display: flex;
+  gap: 14px;
+}
+.rest-mini-stat {
+  background: white;
+  border-radius: 12px;
+  padding: 14px 24px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  flex: 1;
+}
+.rest-mini-value {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1;
+}
+.rest-mini-label {
+  font-size: 12px;
+  color: #aaa;
+  margin: 4px 0 0;
+}
+
+/* TOOLBAR */
+.rest-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.rest-filter-tabs {
+  display: flex;
+  gap: 6px;
+  flex: 1;
+  flex-wrap: wrap;
+}
+.rest-view-toggle {
+  display: flex;
+  border: 1.5px solid #e8e8e8;
+  border-radius: 9px;
+  overflow: hidden;
+}
+.rest-view-btn {
+  padding: 7px 16px;
+  border: none;
+  background: white;
+  font-size: 12px;
+  font-weight: 500;
+  color: #888;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+  transition: all 0.2s;
+}
+.rest-view-btn.active {
+  background: #1a3d1a;
+  color: white;
+  font-weight: 600;
+}
+
+/* GRID */
+.rest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.rest-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: box-shadow 0.2s;
+}
+.rest-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+.rest-card.inactive { opacity: 0.65; }
+.rest-card-img-wrap {
+  position: relative;
+  height: 150px;
+}
+.rest-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.rest-card-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+.rest-card-open {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+.rest-card-open.open   { background: #dcfce7; color: #16a34a; }
+.rest-card-open.closed { background: #fee2e2; color: #dc2626; }
+.rest-card-body {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.rest-card-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+.rest-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.rest-card-info span {
+  font-size: 11px;
+  color: #888;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.rest-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.rest-card-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+.rest-card-sales {
+  font-size: 12px;
+  font-weight: 700;
+  color: #1a3d1a;
+}
+.rest-card-actions {
+  display: flex;
+  gap: 6px;
+}
+.rest-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  border-radius: 7px;
+  border: none;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+  transition: opacity 0.2s;
+}
+.rest-action-btn:hover { opacity: 0.8; }
+.rest-action-btn.edit   { background: #e8f5e9; color: #2e7d32; }
+.rest-action-btn.toggle { background: #e3f2fd; color: #1565c0; flex: 1; justify-content: center; }
+.rest-action-btn.delete { background: #fee2e2; color: #dc2626; }
+
+/* LIST */
+.rest-list-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.table-actions-row {
+  display: flex;
+  gap: 6px;
+}
+
+/* MODAL */
+.rest-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rest-modal {
+  background: white;
+  border-radius: 16px;
+  width: 660px;
+  max-width: 95vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+.rest-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid #f0ece4;
+}
+.rest-modal-header h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+.rest-modal-close {
+  background: #f5f0e8;
+  border: none;
+  border-radius: 8px;
+  padding: 6px;
+  cursor: pointer;
+  color: #555;
+  display: flex;
+  align-items: center;
+}
+.rest-modal-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.rest-modal-left {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.rest-modal-right {
+  background: #f5f0e8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 24px;
+  border-radius: 0 0 16px 0;
+}
+.rest-modal-right p {
+  font-size: 12px;
+  color: #aaa;
+  text-align: center;
+  margin: 0;
+}

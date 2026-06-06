@@ -1,0 +1,298 @@
+/* STAT CARDS */
+.ov-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.ov-stat-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 18px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+.ov-stat-card.active {
+  background: #1a3d1a;
+  border-color: #2a5a2a;
+}
+.ov-stat-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.ov-stat-label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0;
+}
+.ov-stat-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+.ov-stat-icon.active {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+.ov-stat-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 6px;
+  line-height: 1;
+}
+.ov-stat-growth {
+  font-size: 11px;
+  color: #d4920a;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* MIDDLE ROW */
+.ov-middle {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 14px;
+}
+
+/* CHART */
+.ov-chart-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 18px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.ov-chart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.ov-chart-date {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.35);
+  margin: 0;
+}
+.ov-chart-tabs {
+  display: flex;
+  gap: 4px;
+}
+.ov-chart-tab {
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 12px;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+  transition: all 0.2s;
+}
+.ov-chart-tab.active {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+.ov-chart-wrap {
+  height: 160px;
+  width: 100%;
+}
+.ov-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* CREATE PANEL */
+.ov-create-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 18px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.ov-create-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+.ov-create-today {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.35);
+  margin: 0;
+}
+.ov-create-new-label {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 8px 0 4px;
+}
+.ov-create-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ov-create-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.ov-create-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #d4920a;
+  flex-shrink: 0;
+}
+.ov-new-badge {
+  margin-left: auto;
+  background: #d4920a;
+  color: #1a0f00;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+.ov-create-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 9px;
+  background: #1a3d1a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+  transition: background 0.2s;
+}
+.ov-create-btn:hover {
+  background: #2a5a2a;
+}
+
+/* BOTTOM ROW */
+.ov-bottom {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: 14px;
+}
+
+/* VENUE CARDS */
+.ov-venues {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+.ov-venue-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 16px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.ov-venue-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.ov-venue-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+}
+.ov-view-details {
+  background: none;
+  border: none;
+  color: #d4920a;
+  font-size: 11px;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+}
+.ov-venue-sales-label {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.35);
+  margin: 0 0 6px;
+}
+.ov-venue-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.ov-venue-row:last-child {
+  border-bottom: none;
+}
+.ov-venue-name {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.65);
+}
+.ov-venue-value {
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+}
+
+/* ORDER SUMMARY */
+.ov-order-summary {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 16px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ov-order-row {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 10px;
+}
+.ov-order-row:last-of-type {
+  border-bottom: none;
+}
+.ov-order-label {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0 0 2px;
+}
+.ov-order-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+.ov-orders-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 9px;
+  background: #d4920a;
+  color: #1a0f00;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+  margin-top: auto;
+  transition: opacity 0.2s;
+}
+.ov-orders-btn:hover {
+  opacity: 0.88;
+}
