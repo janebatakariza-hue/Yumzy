@@ -2,7 +2,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Overview from "./Pages/Overview/Overview";
 import Clients from "./Pages/Clients/Clients";
 import Restaurants from "./Pages/Restaurants/Restaurants";
-// import Tables from "./Pages/Tables/Tables";
+import Tables from "./Pages/Tables/Tables";
 // import Orders from "./Pages/Orders/Orders";
 // import Menus from "./Pages/Menus/Menus";
 // import Staff from "./Pages/Staff/Staff";
@@ -20,7 +20,7 @@ export default function App() {
       <Route path="/admin/overview" element={<Overview />} />
       <Route path="/admin/clients" element={<Clients />} />
       <Route path="/admin/restaurants" element={<Restaurants />} />
-      {/* <Route path="/admin/tables" element={<Tables />} />
+        <Route path="/admin/tables" element={<Tables />} /> 
       <Route path="/admin/orders" element={<Orders />} />
       <Route path="/admin/menus" element={<Menus />} />
       <Route path="/admin/staff" element={<Staff />} />

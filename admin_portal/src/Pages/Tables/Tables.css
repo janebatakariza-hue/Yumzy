@@ -1,0 +1,115 @@
+/* STATS */
+.tables-stats {
+  display: flex;
+  gap: 12px;
+}
+.tables-stat-card {
+  flex: 1;
+  background: white;
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.tables-stat-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.tables-stat-value {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1;
+}
+.tables-stat-label {
+  font-size: 11px;
+  color: #aaa;
+  margin: 3px 0 0;
+}
+
+/* GRID */
+.tables-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.table-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: box-shadow 0.2s;
+}
+.table-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+.table-card-header {
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.table-card-number {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+.table-card-status {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.table-card-body {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.table-card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.table-card-label {
+  font-size: 11px;
+  color: #aaa;
+}
+.table-card-value {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+.table-card-bill {
+  font-size: 12px;
+  font-weight: 700;
+  color: #1a3d1a;
+}
+.table-card-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+/* MODAL */
+.tables-modal {
+  background: white;
+  border-radius: 16px;
+  width: 420px;
+  max-width: 95vw;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+.tables-modal-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
