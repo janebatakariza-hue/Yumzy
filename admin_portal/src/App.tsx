@@ -12,6 +12,7 @@ import Reviews from "./Pages/Reviews/Reviews";
 import Notifications from "./Pages/Notifications/Notifications";
 import Settings from "./Pages/Settings/Settings";
 import MyAccount from "./Pages/MyAccount/MyAccount";
+import Authentification from "./Pages/Authentication/Authentification";
 
 export default function App() {
   return (
@@ -20,7 +21,7 @@ export default function App() {
       <Route path="/admin/overview" element={<Overview />} />
       <Route path="/admin/clients" element={<Clients />} />
       <Route path="/admin/restaurants" element={<Restaurants />} />
-        <Route path="/admin/tables" element={<Tables />} /> 
+      <Route path="/admin/tables" element={<Tables />} />
       <Route path="/admin/orders" element={<Orders />} />
       <Route path="/admin/menus" element={<Menus />} />
       <Route path="/admin/staff" element={<Staff />} />
@@ -29,7 +30,8 @@ export default function App() {
       <Route path="/admin/reviews" element={<Reviews />} />
       <Route path="/admin/notifications" element={<Notifications />} />
       <Route path="/admin/settings" element={<Settings />} />
-      <Route path="/admin/account" element={<MyAccount />} /> 
+      <Route path="/admin/account" element={<MyAccount />} />
+      <Route path="/authentication" element={<Authentification />} />
     </Routes>
   );
 }

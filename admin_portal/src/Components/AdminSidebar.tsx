@@ -86,7 +86,7 @@ export default function AdminSidebar() {
         {/* Logout */}
         <div
           className="admin-nav-item logout"
-          onClick={() => navigate("/login")}
+          onClick={() => navigate("/authentication")}
         >
           <LogOut size={17} />
           <span>Log Out</span>
