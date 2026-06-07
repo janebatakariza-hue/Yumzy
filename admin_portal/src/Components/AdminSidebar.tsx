@@ -18,22 +18,22 @@ import {
 import "./AdminSidebar.css";
 
 const navItems = [
-  { label: "Overview",      icon: LayoutDashboard, path: "/admin/overview"      },
-  { label: "Clients",       icon: Users,           path: "/admin/clients"       },
-  { label: "Restaurants",   icon: Store,           path: "/admin/restaurants"   },
-  { label: "Tables",        icon: LayoutGrid,      path: "/admin/tables"        },
-  { label: "Orders",        icon: ClipboardList,   path: "/admin/orders"        },
-  { label: "Menus",         icon: UtensilsCrossed, path: "/admin/menus"         },
-  { label: "Staff",         icon: ChefHat,         path: "/admin/staff"         },
-  { label: "Analytics",     icon: BarChart2,       path: "/admin/analytics"     },
-  { label: "Payments",      icon: CreditCard,      path: "/admin/payments"      },
-  { label: "Reviews",       icon: Star,            path: "/admin/reviews"       },
-  { label: "Notifications", icon: Bell,            path: "/admin/notifications" },
+  { label: "Overview", icon: LayoutDashboard, path: "/admin/overview" },
+  { label: "Clients", icon: Users, path: "/admin/clients" },
+  { label: "Restaurants", icon: Store, path: "/admin/restaurants" },
+  { label: "Tables", icon: LayoutGrid, path: "/admin/tables" },
+  { label: "Orders", icon: ClipboardList, path: "/admin/orders" },
+  { label: "Menus", icon: UtensilsCrossed, path: "/admin/menus" },
+  { label: "Staff", icon: ChefHat, path: "/admin/staff" },
+  { label: "Analytics", icon: BarChart2, path: "/admin/analytics" },
+  { label: "Payments", icon: CreditCard, path: "/admin/payments" },
+  { label: "Reviews", icon: Star, path: "/admin/reviews" },
+  { label: "Notifications", icon: Bell, path: "/admin/notifications" },
 ];
 
 const bottomItems = [
-  { label: "Settings",   icon: Settings,   path: "/admin/settings" },
-  { label: "My Account", icon: UserCircle, path: "/admin/account"  },
+  { label: "Settings", icon: Settings, path: "/admin/settings" },
+  { label: "My Account", icon: UserCircle, path: "/admin/account" },
 ];
 
 export default function AdminSidebar() {
@@ -86,7 +86,7 @@ export default function AdminSidebar() {
         {/* Logout */}
         <div
           className="admin-nav-item logout"
-          onClick={() => navigate("/admin/login")}
+          onClick={() => navigate("/login")}
         >
           <LogOut size={17} />
           <span>Log Out</span>

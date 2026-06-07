@@ -1,0 +1,35 @@
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.order-card-admin {
+  background: white;
+  border-radius: 14px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-left: 4px solid #d4920a;
+  transition: box-shadow 0.2s;
+}
+.order-card-admin:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.09); }
+.order-card-left  { flex: 1; min-width: 0; display: flex; gap: 14px; align-items: flex-start; }
+.order-card-mid   { width: 180px; flex-shrink: 0; }
+.order-card-right { width: 160px; flex-shrink: 0; display: flex; flex-direction: column; gap: 6px; align-items: flex-end; }
+.order-card-id    { font-size: 12px; font-weight: 700; margin-bottom: 4px; }
+.order-client     { font-size: 14px; font-weight: 600; color: #1a1a1a; margin: 0; }
+.order-amount     { font-size: 14px; font-weight: 700; color: #1a3d1a; margin: 0 0 4px; }
+.order-meta       { font-size: 11px; color: #888; margin: 2px 0; display: flex; align-items: center; gap: 4px; }
+.order-status-badge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+.order-actions { display: flex; gap: 6px; }
+.order-done-label { font-size: 12px; color: #aaa; font-weight: 500; }

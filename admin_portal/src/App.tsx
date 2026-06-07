@@ -3,15 +3,15 @@ import Overview from "./Pages/Overview/Overview";
 import Clients from "./Pages/Clients/Clients";
 import Restaurants from "./Pages/Restaurants/Restaurants";
 import Tables from "./Pages/Tables/Tables";
-// import Orders from "./Pages/Orders/Orders";
-// import Menus from "./Pages/Menus/Menus";
-// import Staff from "./Pages/Staff/Staff";
-// import Analytics from "./Pages/Analytics/Analytics";
-// import Payments from "./Pages/Payments/Payments";
-// import Reviews from "./Pages/Reviews/Reviews";
-// import Notifications from "./ages/Notifications/Notifications";
-// import Settings from "./Pages/Settings/Settings";
-// import MyAccount from "./Pages/MyAccount/MyAccount";
+import Orders from "./Pages/Orders/Orders";
+import Menus from "./Pages/Menus/Menus";
+import Staff from "./Pages/Staff/Staff";
+import Analytics from "./Pages/Analytics/Analytics";
+import Payments from "./Pages/Payments/Payments";
+import Reviews from "./Pages/Reviews/Reviews";
+import Notifications from "./Pages/Notifications/Notifications";
+import Settings from "./Pages/Settings/Settings";
+import MyAccount from "./Pages/MyAccount/MyAccount";
 
 export default function App() {
   return (
@@ -29,7 +29,7 @@ export default function App() {
       <Route path="/admin/reviews" element={<Reviews />} />
       <Route path="/admin/notifications" element={<Notifications />} />
       <Route path="/admin/settings" element={<Settings />} />
-      <Route path="/admin/account" element={<MyAccount />} /> */}
+      <Route path="/admin/account" element={<MyAccount />} /> 
     </Routes>
   );
 }
