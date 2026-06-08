@@ -15,6 +15,7 @@ import {
   LogOut,
   Store,
 } from "lucide-react";
+import { useAuth } from "../context/AuthContext";
 import "./AdminSidebar.css";
 
 const navItems = [
@@ -39,6 +40,16 @@ const bottomItems = [
 export default function AdminSidebar() {
   const navigate = useNavigate();
   const location = useLocation();
+  const { user, logout } = useAuth();
+
+  const initials = user?.name
+    ? user.name.split(" ").map((n) => n[0]).join("").slice(0, 2).toUpperCase()
+    : "AD";
+
+  const handleLogout = async () => {
+    await logout();
+    navigate("/authentication");
+  };
 
   return (
     <aside className="admin-sidebar">
@@ -86,7 +97,7 @@ export default function AdminSidebar() {
         {/* Logout */}
         <div
           className="admin-nav-item logout"
-          onClick={() => navigate("/authentication")}
+          onClick={handleLogout}
         >
           <LogOut size={17} />
           <span>Log Out</span>
@@ -98,9 +109,9 @@ export default function AdminSidebar() {
         className="admin-sidebar-profile"
         onClick={() => navigate("/admin/account")}
       >
-        <div className="admin-profile-avatar">JB</div>
+        <div className="admin-profile-avatar">{initials}</div>
         <div className="admin-profile-info">
-          <p className="admin-profile-name">Jane BATAKARIZA</p>
+          <p className="admin-profile-name">{user?.name || "Admin"}</p>
           <p className="admin-profile-role">Admin</p>
         </div>
       </div>
