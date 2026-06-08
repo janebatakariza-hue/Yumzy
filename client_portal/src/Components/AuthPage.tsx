@@ -1,26 +1,75 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AuthPage.css";
-import { Eye, EyeOff} from "lucide-react";
-import { FcGoogle} from "react-icons/fc";
-import {FaFacebook} from "react-icons/fa";
-
+import { Eye, EyeOff } from "lucide-react";
+import { FcGoogle } from "react-icons/fc";
+import { FaFacebook } from "react-icons/fa";
+import { useAuth, getErrorMessage } from "../context/AuthContext";
 
 export default function AuthPage() {
   const navigate = useNavigate();
+  const { login, register } = useAuth();
   const [mode, setMode] = useState<"login" | "signup">("login");
   const [showPass, setShowPass] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleLogin = async () => {
+    if (!email || !password) {
+      setError("Please enter email and password.");
+      return;
+    }
+    setLoading(true);
+    setError("");
+    try {
+      await login(email, password);
+      navigate("/overview");
+    } catch (err) {
+      setError(getErrorMessage(err));
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleRegister = async () => {
+    if (!firstName || !lastName || !email || !password) {
+      setError("Please fill in all required fields.");
+      return;
+    }
+    if (password !== confirmPassword) {
+      setError("Passwords do not match.");
+      return;
+    }
+    setLoading(true);
+    setError("");
+    try {
+      await register({
+        name: `${firstName} ${lastName}`.trim(),
+        email,
+        password,
+        phone: phone || undefined,
+      });
+      navigate("/overview");
+    } catch (err) {
+      setError(getErrorMessage(err));
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="auth-page">
-      {/* Background food image */}
       <img src="/login.png" alt="background" className="auth-bg" />
       <div className="auth-overlay" />
 
-      {/* Card */}
       <div className="auth-card">
-        {/* Logo */}
         <div className="auth-logo">
           <img src="/logo.png" alt="Yumzy" />
           <span>Yumzy</span>
@@ -31,9 +80,16 @@ export default function AuthPage() {
             <h2 className="auth-title">Welcome Back</h2>
             <p className="auth-sub">Enter your email and password below</p>
 
+            {error && <p style={{ color: "#dc2626", fontSize: 13, marginBottom: 12 }}>{error}</p>}
+
             <div className="auth-field">
               <label>EMAIL</label>
-              <input type="email" placeholder="you@email.com" />
+              <input
+                type="email"
+                placeholder="you@email.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
 
             <div className="auth-field">
@@ -42,8 +98,12 @@ export default function AuthPage() {
                 <input
                   type={showPass ? "text" : "password"}
                   placeholder="••••••••••"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  onKeyDown={(e) => e.key === "Enter" && handleLogin()}
                 />
                 <button
+                  type="button"
                   className="auth-eye"
                   onClick={() => setShowPass((p) => !p)}
                 >
@@ -57,8 +117,8 @@ export default function AuthPage() {
               <span className="auth-forgot">Forgot password?</span>
             </div>
 
-            <button className="auth-primary-btn" onClick={() => navigate("/")}>
-              Log In
+            <button className="auth-primary-btn" onClick={handleLogin} disabled={loading}>
+              {loading ? "Logging in..." : "Log In"}
             </button>
 
             <div className="auth-divider">
@@ -66,8 +126,8 @@ export default function AuthPage() {
             </div>
 
             <div className="auth-socials">
-              <button className="auth-social-btn"><FcGoogle size={16}/> Google </button>
-              <button className="auth-social-btn"><FaFacebook size={16} /> Facebook</button>
+              <button type="button" className="auth-social-btn"><FcGoogle size={16}/> Google </button>
+              <button type="button" className="auth-social-btn"><FaFacebook size={16} /> Facebook</button>
             </div>
 
             <p className="auth-switch">
@@ -81,23 +141,40 @@ export default function AuthPage() {
           <>
             <h2 className="auth-title">Create your account</h2>
             <p className="auth-sub">
-              Start ordering from the best spots near you
+              Register as a restaurant owner
             </p>
+
+            {error && <p style={{ color: "#dc2626", fontSize: 13, marginBottom: 12 }}>{error}</p>}
 
             <div className="auth-row">
               <div className="auth-field">
                 <label>FIRST NAME</label>
-                <input type="text" placeholder="First name" />
+                <input
+                  type="text"
+                  placeholder="First name"
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
+                />
               </div>
               <div className="auth-field">
                 <label>LAST NAME</label>
-                <input type="text" placeholder="Last name" />
+                <input
+                  type="text"
+                  placeholder="Last name"
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
+                />
               </div>
             </div>
 
             <div className="auth-field">
               <label>EMAIL ADDRESS</label>
-              <input type="email" placeholder="you@email.com" />
+              <input
+                type="email"
+                placeholder="you@email.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
 
             <div className="auth-field">
@@ -109,7 +186,12 @@ export default function AuthPage() {
                   <option>+44</option>
                   <option>+254</option>
                 </select>
-                <input type="tel" placeholder="700 000 000" />
+                <input
+                  type="tel"
+                  placeholder="700 000 000"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                />
               </div>
             </div>
 
@@ -120,23 +202,20 @@ export default function AuthPage() {
                   <input
                     type={showPass ? "text" : "password"}
                     placeholder="••••••••"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                   />
                   <button
+                    type="button"
                     className="auth-eye"
                     onClick={() => setShowPass((p) => !p)}
                   >
-                    {showConfirm ? (
+                    {showPass ? (
                       <EyeOff size={16} color="#aaa" />
                     ) : (
                       <Eye size={16} color="#aaa" />
                     )}
                   </button>
-                </div>
-                <div className="auth-strength">
-                  <div className="auth-strength-bar filled" />
-                  <div className="auth-strength-bar filled" />
-                  <div className="auth-strength-bar" />
-                  <div className="auth-strength-bar" />
                 </div>
               </div>
               <div className="auth-field">
@@ -145,8 +224,11 @@ export default function AuthPage() {
                   <input
                     type={showConfirm ? "text" : "password"}
                     placeholder="••••••••"
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
                   />
                   <button
+                    type="button"
                     className="auth-eye"
                     onClick={() => setShowConfirm((p) => !p)}
                   >
@@ -160,27 +242,9 @@ export default function AuthPage() {
               </div>
             </div>
 
-            <p className="auth-agree">
-              I agree to the <span className="auth-link">Terms of Service</span>{" "}
-              and <span className="auth-link">Privacy Policy</span>
-            </p>
-
-            <button className="auth-primary-btn" onClick={() => navigate("/")}>
-              Create Account
+            <button className="auth-primary-btn" onClick={handleRegister} disabled={loading}>
+              {loading ? "Creating account..." : "Create Account"}
             </button>
-
-            <div className="auth-divider">
-              <span>or sign up with</span>
-            </div>
-
-            <div className="auth-socials">
-              <button className="auth-social-btn">
-                <FcGoogle size={15} /> Google
-              </button>
-              <button className="auth-social-btn">
-                <FaFacebook size={15} /> Facebook
-              </button>
-            </div>
 
             <p className="auth-switch">
               Already have an account?{" "}

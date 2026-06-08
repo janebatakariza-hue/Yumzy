@@ -1,4 +1,5 @@
 import { Routes, Route, Navigate } from "react-router-dom";
+import ProtectedRoute from "./components/ProtectedRoute";
 import Overview from "./Pages/Overview/Overview";
 import Clients from "./Pages/Clients/Clients";
 import Restaurants from "./Pages/Restaurants/Restaurants";
@@ -18,20 +19,20 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Navigate to="/admin/overview" />} />
-      <Route path="/admin/overview" element={<Overview />} />
-      <Route path="/admin/clients" element={<Clients />} />
-      <Route path="/admin/restaurants" element={<Restaurants />} />
-      <Route path="/admin/tables" element={<Tables />} />
-      <Route path="/admin/orders" element={<Orders />} />
-      <Route path="/admin/menus" element={<Menus />} />
-      <Route path="/admin/staff" element={<Staff />} />
-      <Route path="/admin/analytics" element={<Analytics />} />
-      <Route path="/admin/payments" element={<Payments />} />
-      <Route path="/admin/reviews" element={<Reviews />} />
-      <Route path="/admin/notifications" element={<Notifications />} />
-      <Route path="/admin/settings" element={<Settings />} />
-      <Route path="/admin/account" element={<MyAccount />} />
       <Route path="/authentication" element={<Authentification />} />
+      <Route path="/admin/overview" element={<ProtectedRoute><Overview /></ProtectedRoute>} />
+      <Route path="/admin/clients" element={<ProtectedRoute><Clients /></ProtectedRoute>} />
+      <Route path="/admin/restaurants" element={<ProtectedRoute><Restaurants /></ProtectedRoute>} />
+      <Route path="/admin/tables" element={<ProtectedRoute><Tables /></ProtectedRoute>} />
+      <Route path="/admin/orders" element={<ProtectedRoute><Orders /></ProtectedRoute>} />
+      <Route path="/admin/menus" element={<ProtectedRoute><Menus /></ProtectedRoute>} />
+      <Route path="/admin/staff" element={<ProtectedRoute><Staff /></ProtectedRoute>} />
+      <Route path="/admin/analytics" element={<ProtectedRoute><Analytics /></ProtectedRoute>} />
+      <Route path="/admin/payments" element={<ProtectedRoute><Payments /></ProtectedRoute>} />
+      <Route path="/admin/reviews" element={<ProtectedRoute><Reviews /></ProtectedRoute>} />
+      <Route path="/admin/notifications" element={<ProtectedRoute><Notifications /></ProtectedRoute>} />
+      <Route path="/admin/settings" element={<ProtectedRoute><Settings /></ProtectedRoute>} />
+      <Route path="/admin/account" element={<ProtectedRoute><MyAccount /></ProtectedRoute>} />
     </Routes>
   );
 }
